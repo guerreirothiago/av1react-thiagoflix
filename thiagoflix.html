@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThiagoFlix - Sua Plataforma de Streaming</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.rtl.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.rtl.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-utilities.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-utilities.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-utilities.rtl.min.css">
+    <link rel="stylesheet" href="thiagoflix.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <span class="text-danger">Thiago</span>Flix
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-danger" aria-current="page" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Séries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Filmes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Jogos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Minha Lista</a>
+                    </li>
+                </ul>
+                <form class="d-flex me-3">
+                    <input class="form-control bg-dark text-light border-secondary" type="search" placeholder="Buscar filmes..." aria-label="Search">
+                    <button class="btn btn-outline-danger ms-2" type="submit">🔍</button>
+                </form>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="classificationDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Classificação: Livre
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="classificationDropdown">
+                        <li><a class="dropdown-item" href="#" onclick="setClassification('Livre')">🔓 Livre</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="setClassification('Infantil')">👶 Infantil</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/monkey-d-luffy-gear-5120x2880-16528.jpg" class="d-block w-100 hero-img" alt="One Piece">
+                <div class="carousel-caption d-flex flex-column justify-content-end hero-caption">
+                    <h1>One Piece</h1>
+                    <p>Eps 62-77 remasterizados em HD. O capitão Luffy navega em busca do título de Rei dos Piratas.</p>
+                    <div class="hero-buttons">
+                        <button class="banner-btn btn-assistir"><span>▶</span> Assistir</button>
+                        <button class="banner-btn btn-info">Mais informações</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://image.tmdb.org/t/p/original/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg" class="d-block w-100 hero-img" alt="Avengers: Endgame">
+                <div class="carousel-caption d-flex flex-column justify-content-end hero-caption">
+                    <h1>Senhor dos aneis</h1>
+                    <p>jornada do hobbit Frodo Bolseiro para destruir o "Um Anel", um artefato maligno criado por Sauron para dominar a Terra Média.</p>
+                    <div class="hero-buttons">
+                        <button class="banner-btn btn-assistir"><span>▶</span> Assistir</button>
+                        <button class="banner-btn btn-info">Mais informações</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://image.tmdb.org/t/p/original/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" class="d-block w-100 hero-img" alt="The Conjuring">
+                <div class="carousel-caption d-flex flex-column justify-content-end hero-caption">
+                    <h1>The Conjuring</h1>
+                    <p>Baseado em casos reais dos famosos investigadores paranormais Ed e Lorraine Warren.</p>
+                    <div class="hero-buttons">
+                        <button class="banner-btn btn-assistir"><span>▶</span> Assistir</button>
+                        <button class="banner-btn btn-info">Mais informações</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+    </section>
+
+    <div class="main-background">
+        <div class="gradient-overlay"></div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="movie-section">
+            <h2 class="section-title">🔥 Em Alta</h2>
+            <div class="slider-container">
+                <button class="slider-btn prev-btn" onclick="moveSlide('slide1', -1)">❮</button>
+                <div class="movie-row" id="slide1">
+                    <div class="movie-card">
+                        <img src="https://picsum.photos/300/450?random=1" alt="Filme 1">
+                        <div class="movie-info">
+                            <h5>Filme 1</h5>
+                            <p>2024 • Ação</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://picsum.photos/300/450?random=2" alt="Filme 2">
+                        <div class="movie-info">
+                            <h5>Filme 2</h5>
+                            <p>2024 • Comédia</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://picsum.photos/300/450?random=3" alt="Filme 3">
+                        <div class="movie-info">
+                            <h5>Filme 3</h5>
+                            <p>2024 • Drama</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://picsum.photos/300/450?random=4" alt="Filme 4">
+                        <div class="movie-info">
+                            <h5>Filme 4</h5>
+                            <p>2024 • Terror</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://picsum.photos/300/450?random=5" alt="Filme 5">
+                        <div class="movie-info">
+                            <h5>Filme 5</h5>
+                            <p>2024 • Sci-Fi</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://picsum.photos/300/450?random=6" alt="Filme 6">
+                        <div class="movie-info">
+                            <h5>Filme 6</h5>
+                            <p>2024 • Romance</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn next-btn" onclick="moveSlide('slide1', 1)">❯</button>
+            </div>
+        </div>
+
+        <div class="movie-section">
+            <h2 class="section-title">⭐ Recomendados para Você</h2>
+            <div class="slider-container">
+                <button class="slider-btn prev-btn" onclick="moveSlide('slide2', -1)">❮</button>
+                <div class="movie-row" id="slide2">
+                    <div class="movie-card">
+                        <img src="https://picsum.photos/300/450?random=7" alt="Filme 7">
+                        <div class="movie-info">
+                            <h5>Filme 7</h5>
+                            <p>2024 • Aventura</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://picsum.photos/300/450?random=8" alt="Filme 8">
+                        <div class="movie-info">
+                            <h5>Filme 8</h5>
+                            <p>2024 • Suspense</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://picsum.photos/300/450?random=9" alt="Filme 9">
+                        <div class="movie-info">
+                            <h5>Filme 9</h5>
+                            <p>2024 • Fantasia</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://picsum.photos/300/450?random=10" alt="Filme 10">
+                        <div class="movie-info">
+                            <h5>Filme 10</h5>
+                            <p>2024 • Animação</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://picsum.photos/300/450?random=11" alt="Filme 11">
+                        <div class="movie-info">
+                            <h5>Filme 11</h5>
+                            <p>2024 • Documentário</p>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://picsum.photos/300/450?random=12" alt="Filme 12">
+                        <div class="movie-info">
+                            <h5>Filme 12</h5>
+                            <p>2024 • Thriller</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn next-btn" onclick="moveSlide('slide2', 1)">❯</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
