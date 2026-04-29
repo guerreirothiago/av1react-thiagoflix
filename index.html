@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thiagoflix</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="hero-background"></div>
+  
+  <!-- Netflix-style Navbar -->
+  <nav class="netflix-navbar navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">THIAGOFFLIX</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Séries</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Filmes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Bombando</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Minha Lista</a>
+          </li>
+        </ul>
+        
+        <div class="d-flex align-items-center gap-3">
+          <button class="search-btn" type="button">
+            🔍 Pesquisar
+          </button>
+          
+          <select class="classification-dropdown" id="classification">
+            <option value="">📋 Classificação</option>
+            <option value="livre">🔵 Livre</option>
+            <option value="18">⚫ Adulto</option>
+            <option value="infantil">🧒 Infantil</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Carousel Slide com 3 Imagens -->
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/images/monkey-d-luffy-gear-5120x2880-16528.jpg" class="d-block w-100" alt="Slide 1">
+        <div class="carousel-caption">
+          <h5>One Piece</h5>
+          <p>A maior aventura épica dos mares!</p>
+          <div class="hero-buttons">
+            <button class="btn-play">▶ Assistir</button>
+            <button class="btn-info">ℹ Mais Informações</button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=1920&q=80" class="d-block w-100" alt="Slide 2">
+        <div class="carousel-caption">
+          <h5>Filmes em Destaque</h5>
+          <p>Os melhores filmes do momento!</p>
+          <div class="hero-buttons">
+            <button class="btn-play">▶ Assistir</button>
+            <button class="btn-info">ℹ Mais Informações</button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1920&q=80" class="d-block w-100" alt="Slide 3">
+        <div class="carousel-caption">
+          <h5>Séries Originais</h5>
+          <p>Assista agora nas plataformas!</p>
+          <div class="hero-buttons">
+            <button class="btn-play">▶ Assistir</button>
+            <button class="btn-info">ℹ Mais Informações</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Próximo</span>
+    </button>
+  </div>
+  
+  <div class="main-content">
+
+    <h3 class="movie-row-title">🔥 Em Alta</h3>
+    <div class="movie-row" id="row1">
+      <button class="nav-arrow prev" onclick="scrollRow('row1', -300)">❮</button>
+      
+      <div class="movie-card">
+        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=300&q=80" alt="Filme 1">
+        <div class="movie-overlay">
+          <h5>Filme 1</h5>
+          <span>98% Match</span>
+        </div>
+      </div>
+      
+      <div class="movie-card">
+        <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=300&q=80" alt="Filme 2">
+        <div class="movie-overlay">
+          <h5>Filme 2</h5>
+          <span>95% Match</span>
+        </div>
+      </div>
+      
+      <div class="movie-card">
+        <img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=300&q=80" alt="Filme 3">
+        <div class="movie-overlay">
+          <h5>Filme 3</h5>
+          <span>92% Match</span>
+        </div>
+      </div>
+      
+      <div class="movie-card">
+        <img src="https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=300&q=80" alt="Filme 4">
+        <div class="movie-overlay">
+          <h5>Filme 4</h5>
+          <span>89% Match</span>
+        </div>
+      </div>
+      
+      <div class="movie-card">
+        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=300&q=80" alt="Filme 5">
+        <div class="movie-overlay">
+          <h5>Filme 5</h5>
+          <span>87% Match</span>
+        </div>
+      </div>
+      
+      <div class="movie-card">
+        <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=300&q=80" alt="Filme 6">
+        <div class="movie-overlay">
+          <h5>Filme 6</h5>
+          <span>85% Match</span>
+        </div>
+      </div>
+      
+      <button class="nav-arrow next" onclick="scrollRow('row1', 300)">❯</button>
+    </div>
+    
+    <h3 class="movie-row-title">🎬 Originais Thiagoflix</h3>
+    <div class="movie-row" id="row2">
+      <button class="nav-arrow prev" onclick="scrollRow('row2', -300)">❮</button>
+      
+      <div class="movie-card">
+        <img src="https://images.unsplash.com/photo-1512070679279-8988d32161be?w=300&q=80" alt="Filme 7">
+        <div class="movie-overlay">
+          <h5>Filme 7</h5>
+          <span>99% Match</span>
+        </div>
+      </div>
+      
+      <div class="movie-card">
+        <img src="https://images.unsplash.com/photo-1514306191717-452ec28c7814?w=300&q=80" alt="Filme 8">
+        <div class="movie-overlay">
+          <h5>Filme 8</h5>
+          <span>96% Match</span>
+        </div>
+      </div>
+      
+      <div class="movie-card">
+        <img src="https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=300&q=80" alt="Filme 9">
+        <div class="movie-overlay">
+          <h5>Filme 9</h5>
+          <span>94% Match</span>
+        </div>
+      </div>
+      
+      <div class="movie-card">
+        <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=300&q=80" alt="Filme 10">
+        <div class="movie-overlay">
+          <h5>Filme 10</h5>
+          <span>91% Match</span>
+        </div>
+      </div>
+      
+      <div class="movie-card">
+        <img src="https://images.unsplash.com/photo-1533488765986-dfa2a9939acd?w=300&q=80" alt="Filme 11">
+        <div class="movie-overlay">
+          <h5>Filme 11</h5>
+          <span>88% Match</span>
+        </div>
+      </div>
+      
+      <div class="movie-card">
+        <img src="https://images.unsplash.com/photo-1460881680093-7c7f50251d5f?w=300&q=80" alt="Filme 12">
+        <div class="movie-overlay">
+          <h5>Filme 12</h5>
+          <span>86% Match</span>
+        </div>
+      </div>
+      
+      <button class="nav-arrow next" onclick="scrollRow('row2', 300)">❯</button>
+    </div>
+    
+  </div>
+  
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  <script src="script.js"></script>
+  
+</body>
+</html>

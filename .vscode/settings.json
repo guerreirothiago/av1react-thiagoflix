@@ -1,4 +1,3 @@
 {
-    "editor.wordWrap": "on",
-    "claudeCodeChat.permissions.yoloMode": true
+    "liveServer.settings.port": 3001
 }
