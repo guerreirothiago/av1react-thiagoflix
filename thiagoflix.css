@@ -18,6 +18,83 @@ body {
     position: relative;
 }
 
+.navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+    color: #e5e5e5 !important;
+    font-size: 14px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #b3b3b3 !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #fff !important;
+    font-weight: 500;
+}
+
+.navbar form input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+.navbar form input::placeholder {
+    color: #999;
+}
+
+.navbar form input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #e50914;
+    outline: none;
+    width: 250px;
+}
+
+.navbar form button {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.navbar form button:hover {
+    background: #e50914;
+    border-color: #e50914;
+}
+
+.dropdown-toggle {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #fff !important;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dropdown-menu {
+    background: #181818;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 10px 0;
+}
+
 .dropdown-item {
     color: #e5e5e5 !important;
     padding: 10px 20px;
