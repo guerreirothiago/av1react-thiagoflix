@@ -48,7 +48,6 @@ body {
   border-color: #E50914;
 }
 
-/* Classification Dropdown */
 .classification-dropdown {
   background: rgba(0,0,0,0.7);
   border: 1px solid #fff;
@@ -63,7 +62,6 @@ body {
   border-color: #E50914;
 }
 
-/* Background for slides */
 .hero-background {
   position: fixed;
   top: 0;
@@ -77,7 +75,6 @@ body {
   z-index: -1;
 }
 
-/* Movie Row Title */
 .movie-row-title {
   color: #fff;
   font-family: 'Inter', sans-serif;
@@ -86,7 +83,6 @@ body {
   margin: 30px 0 15px 4%;
 }
 
-/* Movie Cards Container */
 .movie-row {
   display: flex;
   gap: 15px;
@@ -99,7 +95,6 @@ body {
   display: none;
 }
 
-/* Movie Card */
 .movie-card {
   min-width: 200px;
   height: 300px;
@@ -150,7 +145,6 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Navigation Arrows */
 .nav-arrow {
   position: absolute;
   top: 50%;
@@ -177,12 +171,10 @@ body {
   right: 0;
 }
 
-/* Main Content */
 .main-content {
   padding-top: 80px;
 }
 
-/* Hero Section */
 .hero-content {
   padding: 100px 4% 50px;
   color: #fff;
@@ -236,7 +228,6 @@ body {
   background: rgba(109,109,110,0.5);
 }
 
-/* Section Title */
 .section-title {
   color: #fff;
   font-family: 'Inter', sans-serif;
@@ -245,7 +236,6 @@ body {
   margin: 40px 0 15px 4%;
 }
 
-/* Hero Carousel */
 #heroCarousel {
   margin-top: 60px;
   height: 400px;
